@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gestures</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js" integrity="sha512-dQIiHSl2hr3NWKKLycPndtpbh5iaHLo6MwrXm7F0FM5e+kL2U16oE9uIwPHUl6fQBeCthiEuV/rzP3MiAB8Vfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+    <link rel = 'stylesheet' type = 'text/css' href = 'style.css'>
+    <script src = 'main.js'></script>
+</head>
+<body>
+ <center>
+       <div class = "heading">
+          
+            <h1 id = "title">
+                Hand Gestures Web App
+            </h1>
+            <span>&#128077</span>
+            <span>&#128078</span>
+            <span>&#128076</span>
+    
+       </div>
+       <hr>
+       <b>
+        <label> Webcam - </label>
+       </b>
+       <div>
+        <div id = "camera"></div>
+        <br>
+        <button onclick = "capture();" class = "btn btn-success">Capture</button>
+       </div>
+       <br>
+       
+       <hr>
+       <div id = "models">
+           <p> Prediction - </p>
+           <p id = "gesture1"></p>
+           <p id = "gesture1_emoji"></p>
+           <br>
+           <p>Prediction 2 -</p>
+           <p id = "gesture2"></p>
+           <p id = "gesture2_emoji"></p>
+        <hr>
+            <b>
+                <label> Captured Image - </label>
+            </b>
+           <div id = "captured"></div>
+           <br>
+           <button onclick = "identify();" class = "btn btn-primary">Identify Gesture</button>
+           <br>
+       </div>
+
+       <script>
+        Webcam.set({
+    width:350,
+    height:300,
+    image_format:'png',
+    png_quality: 90
+})
+
+    webcam = document.getElementById("camera");
+
+Webcam.attach( '#camera' );
+       </script>
+       
+ </center>
+</body>
+</html>

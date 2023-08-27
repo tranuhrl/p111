@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+html
+{
+    height:fit-content;
+}
+body
+{
+    background: linear-gradient(#ff756b, #ffdc7d)
+}
+h1
+{
+    font-family: 'Barriecito', cursive;
+    font-size: 50px;
+}
+span
+{
+    font-size: 30px;
+
+}
+#camera
+{
+    width: 350px;
+    height: 300px;
+    border-style: dashed;
+}
+#captured
+{
+    width: 350px;
+    height: 300px;
+    border-style: dashed;
+}
